@@ -1,0 +1,163 @@
+/* @tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+
+body {
+@apply bg-black;
+
+}
+
+
+
+.lk-username-container > #username {
+
+@apply hidden;
+
+}
+
+
+
+.closed-captions-wrapper {
+
+width: 100%;
+
+position: absolute;
+
+bottom: 20%;
+
+display: flex;
+
+justify-content: center;
+
+z-index: 100;
+
+font-size: 18px;
+
+}
+
+
+
+.closed-captions-container {
+
+background: black;
+color: white;
+display: flex;
+
+flex-direction: row;
+
+}
+
+
+
+.gradient-text {
+
+@apply bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent;
+
+}
+
+
+
+.lk-join-button {
+
+background: #3f75ff !important;
+
+}
+
+
+
+.lk-join-button:hover {
+
+background: #89beff !important;
+
+}
+
+.lk-video-conference {
+
+@apply bg-black;
+
+}
+
+
+
+.lk-list,
+
+.lk-chat-form {
+@apply bg-black;
+
+} */
+
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --background-nav: rgba(255, 255, 255, 0.5);
+  --background-secondary: #f9fafb; /* Light gray for sections */
+  --text-primary: #000000;
+  --text-secondary: #555555;
+  --primary: #3336d5;
+  --secondary: #a855f7;
+  --tertiary: #ec4899;
+}
+
+[data-theme="dark"] {
+  --background: #000000;
+  --background-nav: rgba(0, 0, 0, 0.5);
+  --background-secondary: #111827; /* Dark gray for sections */
+  --text-primary: #ffffff;
+  --text-secondary: #bbbbbb;
+}
+
+body {
+  @apply bg-background text-text-primary;
+}
+
+.bg-background {
+  background-color: var(--background);
+}
+
+.bg-background-secondary {
+  background-color: var(--background-secondary);
+}
+
+.bg-background-nav {
+  background-color: var(--background-nav);
+}
+
+.text-text-primary {
+  color: var(--text-primary);
+}
+
+.text-text-secondary {
+  color: var(--text-secondary);
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent;
+}
+
+.lk-join-button {
+  background: #3f75ff !important;
+}
+
+.lk-join-button:hover {
+  background: #89beff !important;
+}
+
+.lk-video-conference {
+  @apply bg-background;
+}
+
+.lk-list,
+.lk-chat-form {
+  @apply bg-background;
+}
